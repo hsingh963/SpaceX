@@ -1,0 +1,21 @@
+<div class="home-container">
+  <navbar
+    class="nav-home"
+    (yearFilter)="FilterLaunchByYear($event)"
+    (launchSuccessFilter)="FilterByLaunchSuccess($event)"
+    (landSuccessFilter)="FilterByLandSuccess($event)"
+  ></navbar>
+
+  <div class="cardList" *ngIf="allFlights?.length > 0; else nodata">
+    <ng-container *ngFor="let flight of allFlights">
+      <card class="cardListItem" [flight]="flight"></card>
+    </ng-container>
+  </div>
+  
+    <ng-template #nodata>
+      <div class="data-error loading-overlay">
+        <img src="../../../assets/missData.png" />
+      </div>
+    </ng-template>
+  
+</div>

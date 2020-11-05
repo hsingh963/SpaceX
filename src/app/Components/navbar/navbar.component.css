@@ -1,0 +1,60 @@
+
+input[name=btn-launch] , input[name=btn-land], input[name=btn-years]{
+    display:none
+}
+input[type=radio]:checked + label{
+background-color: #b476ff
+}
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav label {
+    padding:5px;
+    cursor:pointer;
+    background: #a0b9ff;
+    border-radius: 5px;
+    text-align: center;
+
+    -webkit-appearance: button;
+    /* WebKit */
+    -moz-appearance: button;
+    /* Mozilla */
+    -o-appearance: button;
+    /* Opera */
+    -ms-appearance: button;
+    /* Internet Explorer */
+    appearance: button;
+    /* CSS3 */
+
+
+}
+
+.nav label:hover{
+    background:#2a87ff
+}
+
+/*  Navigation bar years  */
+.nav-years{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.nav-years > label {
+  flex: 0 32%;
+  margin-bottom: 2%;
+}
+
+.btn-grp{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-years h2{
+    min-width: 100%;
+    text-align: center;
+}

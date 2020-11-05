@@ -1,0 +1,93 @@
+<div class="nav">
+  <h2>Launch Year</h2>
+  <br />
+  <div class="nav-years">
+    <ng-container *ngFor="let year of years; let i = index">
+      <input
+        type="radio"
+        name="btn-years"
+        [attr.id]="'btn_year_' + i"
+        value="{{ year }}"
+        (click)="filterByYear($event)"
+      />
+      <label [attr.for]="'btn_year_' + i">{{ year }}</label>
+    </ng-container>
+    <input
+      type="radio"
+      id="btn_year_all"
+      name="btn-years"
+      value="0"
+      (click)="filterByYear($event)"
+    />
+    <label for="btn_year_all">Clear Filter</label>
+  </div>
+
+  <div class="nav-years btn-grp">
+    <br />
+    <h2>Successful Landing</h2>
+    <input
+      type="radio"
+      id="btn-land-true"
+      name="btn-land"
+      value="true"
+      (click)="filterByLandSuccess($event)"
+    />
+    <label for="btn-land-true">True</label>
+
+    <input
+      type="radio"
+      id="btn-land-false"
+      name="btn-land"
+      value="false"
+      (click)="filterByLandSuccess($event)"
+    />
+    <label for="btn-land-false">False</label>
+    <br />
+
+      <input
+      type="radio"
+      id="btn-land-clear"
+      name="btn-land"
+      value="null"
+      (click)="filterByLandSuccess($event)"
+    />
+    <label for="btn-land-clear">Clear Filter</label>
+
+  </div>
+
+  <div class="nav-years btn-grp">
+    <br />
+    <h2>Successful Launch</h2>
+   
+    <input
+      type="radio"
+      id="btn-launch-true"
+      name="btn-launch"
+      value="true"
+      (click)="filterByLaunchSuccess($event)"
+    />
+    <label for="btn-launch-true">True</label>
+
+    <input
+      type="radio"
+      id="btn-launch-false"
+      name="btn-launch"
+      value="false"
+      (click)="filterByLaunchSuccess($event)"
+    />
+    <label for="btn-launch-false">False</label>
+    
+    <input
+    type="radio"
+    id="btn-launch-clear"
+    name="btn-launch"
+    value="null"
+    (click)="filterByLaunchSuccess($event)"
+    />
+    <label for="btn-launch-clear">Clear Filter</label>
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="flight-card">
+    <div class="card_content">
+      <img class="card_img" src="{{ flight.imgURL }}" loading="lazy" alt="Flight-mission-img"/>
+      <h1 class="card_header">{{ flight.mission_name }}</h1>
+      <p class="card_text">Mission ID's</p>
+      <ul>
+        <li *ngFor="let item of missionID;" class="card_text">
+          {{ item }}
+        </li>
+      </ul>
+      <p class="card_text extended-row">
+        <span>Launch Year:</span>
+        <span class="separator"></span> 
+        {{ flight.launch_year }}
+      </p>
+      <p class="card_text extended-row">
+        <span>Successful Launch </span>
+        <span class="separator"></span> 
+        {{ flight.launch_success }}
+      </p>
+      <p class="card_text extended-row">
+        <span>Successful Landing </span>
+        <span class="separator"></span>
+        {{ land_success }}
+      </p>
+    </div>
+  </div>
+</div> 
