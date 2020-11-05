@@ -4,7 +4,7 @@
 - Uses the official API to fetch the updated data
 
 - Compatible with all major browsers (IE8+) and mobile devices
-
+- Visit https://spacex-e5723.web.app/
 
 Project Structure
 -------------
