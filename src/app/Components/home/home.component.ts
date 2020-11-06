@@ -76,15 +76,18 @@ export class HomeComponent implements OnInit ,OnDestroy{
 
   // GetFlightData() --> used to fetch the data from service based on the filters applied
   GetFlightData() {
-    this.subscription=this.dataService
+    this.subscription = this.dataService
       .getLaunchData(
         this.yearFilter,
         this.launchSuccessFilter,
         this.landSuccessFilter
       )
-      .subscribe((res: RootObject[]) => {
+      .subscribe(
+        (res: RootObject[]) => {
         this.res = res;
         this.MapFlightObject();
-      });
+      },
+      (error) => { this.allFlights = []; }
+      );
   }
 }
