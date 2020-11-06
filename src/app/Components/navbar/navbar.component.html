@@ -1,7 +1,8 @@
 <div class="nav">
-  <h2>Launch Year</h2>
-  <br />
-  <div class="nav-years">
+ 
+  <section class="nav-years">
+    <h2>Launch Year</h2>
+    <br />
     <ng-container *ngFor="let year of years; let i = index">
       <input
         type="radio"
@@ -20,9 +21,9 @@
       (click)="filterByYear($event)"
     />
     <label for="btn_year_all">Clear Filter</label>
-  </div>
+  </section>
 
-  <div class="nav-years btn-grp">
+  <section class="nav-years btn-grp">
     <br />
     <h2>Successful Landing</h2>
     <input
@@ -53,9 +54,9 @@
     />
     <label for="btn-land-clear">Clear Filter</label>
 
-  </div>
+  </section>
 
-  <div class="nav-years btn-grp">
+  <section class="nav-years btn-grp">
     <br />
     <h2>Successful Launch</h2>
    
@@ -87,7 +88,7 @@
     <label for="btn-launch-clear">Clear Filter</label>
 
 
-  </div>
+  </section>
 
 
 </div>
